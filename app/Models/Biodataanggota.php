@@ -15,6 +15,7 @@ class Biodataanggota extends Model
      * @var array
      */
     protected $fillable = [
+        'image',
         'nama_kpop',
         'jk_kpop',
         'dob_kpop',

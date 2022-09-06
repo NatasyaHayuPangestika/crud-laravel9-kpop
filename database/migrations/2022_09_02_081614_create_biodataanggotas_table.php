@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('biodataanggotas', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('nama_kpop');
             $table->string('jk_kpop');
             $table->date('dob_kpop');

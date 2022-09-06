@@ -19,6 +19,7 @@
                         <table class="table table-bordered">
                             <thead>
                               <tr>
+                                <th scope="col">FOTO</th>
                                 <th scope="col">NAMA</th>
                                 <th scope="col">JENIS KELAMIN</th>
                                 <th scope="col">TANGGAL LAHIR</th>
@@ -29,6 +30,9 @@
                             <tbody>
                               @forelse ($biodataanggotas as $biodataanggota)
                                 <tr>
+                                    <td class="text-center">
+                                        <img src="{{ Storage::url('public/biodataanggotas/').$biodataanggota->image }}" class="rounded" style="width: 150px">
+                                    </td>
                                     <td>{{ $biodataanggota->nama_kpop }}</td>
                                     <td>{{ $biodataanggota->jk_kpop }}</td>
                                     <td>{{ $biodataanggota->dob_kpop }}</td>

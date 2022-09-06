@@ -19,6 +19,12 @@
                             @method('PUT')
 
                             <div class="form-group">
+                                <label class="font-weight-bold">FOTO</label>
+                                <input type="file" class="form-control" name="image">
+                            </div>
+
+
+                            <div class="form-group">
                                 <label class="font-weight-bold">NAMA</label>
                                 <input type="text" class="form-control @error('nama_kpop') is-invalid @enderror" name="nama_kpop" value="{{ old('nama_kpop', $biodataanggota->nama_kpop) }}" placeholder="Masukkan Nama">
                             
@@ -31,12 +37,12 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">JENIS KELAMIN 
+                            <div class="form-group">
+                                <label class="font-weight-bold">JENIS KELAMIN 
                                 </label>
-                                <div class="col-sm-10">
-                                <select name="jk_kpop" class="form-control">
-                                    <option value="{{ old('jk_kpop', $biodataanggota->jk_kpop) }}">-Pilih-</option>
+                                <div class="col-sm-16">
+                                <select name="jk_kpop" class="form-control @error('jk_kpop') is-invalid @enderror">
+                                    <option value="{{ old('jk_kpop', $biodataanggota->jk_kpop) }} ">{{ old('jk_kpop', $biodataanggota->jk_kpop) }}</option>
                                     <option @if(old('jk_kpop')=='Laki-Laki') selected @endif value="Laki-Laki">Laki-Laki</option>
                                     <option @if(old('jk_kpop')=='Perempuan') selected @endif value="Perempuan">Perempuan</option>
                                 </select>
